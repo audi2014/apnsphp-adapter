@@ -1,3 +1,32 @@
+```php
+use Audi2014\ApnsAdapter\Apns;
+use Audi2014\ApnsAdapter\Fcm;
+(new Apns([
+    Apns::CONF_APP_CER => 'sandbox.cer',
+    Apns::CONF_SANDBOX => true,
+]))->sendByTokenArray([
+    '***TOKEN***',
+    '***TOKEN***',
+    '***TOKEN***',
+],"adapterSandbox","adapterSandbox");
+(new Apns([
+    Apns::CONF_APP_CER => 'prod.cer',
+    Apns::CONF_SANDBOX => false,
+]))->sendByTokenArray([
+    '***TOKEN***',
+    '***TOKEN***',
+    '***TOKEN***',
+],"adapterProduction","adapterProduction");
+(new Fcm([
+    Fcm::CONF_APP_KEY => '**',
+]))->sendByTokenArray([
+    '***TOKEN***',
+    '***TOKEN***',
+    '***TOKEN***',
+],"adapterFcm","adapterFcm");
+
+```
+
 #how to generate apns pem?
 
 ###DEV
