@@ -53,7 +53,7 @@ class Apns implements AdapterInterface {
                 $push->add($message);
                 $errors = $this->send($push);
             } catch (\Exception $e) {
-
+                $this->logger->log($e->getMessage());
             }
         }
         return $errors;
@@ -77,6 +77,7 @@ class Apns implements AdapterInterface {
             // Connect to the Apple Push Notification Service
             $push->connect();
         } catch (\Exception $e) {
+            $this->logger->log($e->getMessage());
             return null;
         }
         return $push;
