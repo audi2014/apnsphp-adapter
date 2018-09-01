@@ -39,6 +39,8 @@ class Fcm implements AdapterInterface {
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($fields));
         curl_exec($curl);
+        $response = curl_exec($curl);
         curl_close($curl);
+        return $response;
     }
 }
