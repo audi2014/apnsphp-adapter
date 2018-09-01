@@ -1,6 +1,6 @@
 {
-    "name": "audi2014/apnsphp-adapter",
-    "description": "get fb user by token",
+    "name": "audi2014/push-adapter",
+    "description": "send push notifications to fcm and apns in same interface",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "stable",
