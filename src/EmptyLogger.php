@@ -6,7 +6,7 @@
  * Time: 13:16
  */
 
-namespace Audi2014\ApnsAdapter;
+namespace Audi2014\PushAdapter;
 
 
 use ApnsPHP_Log_Interface;

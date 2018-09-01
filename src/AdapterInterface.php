@@ -6,7 +6,7 @@
  * Time: 13:13
  */
 
-namespace Audi2014\ApnsAdapter;
+namespace Audi2014\PushAdapter;
 
 
 interface AdapterInterface {

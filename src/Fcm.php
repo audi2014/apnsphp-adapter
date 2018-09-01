@@ -6,7 +6,7 @@
  * Time: 13:14
  */
 
-namespace Audi2014\ApnsAdapter;
+namespace Audi2014\PushAdapter;
 
 
 class Fcm implements AdapterInterface {

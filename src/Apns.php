@@ -1,6 +1,6 @@
 <?php
 
-namespace Audi2014\ApnsAdapter;
+namespace Audi2014\PushAdapter;
 
 use ApnsPHP_Abstract;
 use ApnsPHP_Message;
