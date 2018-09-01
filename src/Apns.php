@@ -62,7 +62,7 @@ class Apns implements AdapterInterface {
     /**
      * @return ApnsPHP_Push
      */
-    private function connect(): ApnsPHP_Push {
+    private function connect(): ?ApnsPHP_Push {
         $push = null;
         try {
             $push = new ApnsPHP_Push(
