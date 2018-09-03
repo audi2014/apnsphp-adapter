@@ -19,13 +19,16 @@ class Fcm implements AdapterInterface {
 
     public function sendByTokenArray(array $tokenArray, $text = "", $subject = "subject", $argsArray = []) {
 
-        $argsArray['body'] = $text;
-        $argsArray['title'] = $subject;
+        $notification['body'] = $text;
+        $notification['title'] = $subject;
         $url = 'https://fcm.googleapis.com/fcm/send';
         $fields = [
             'registration_ids' => $tokenArray,
-            'data' => $argsArray,
+            'notification' => $notification,
         ];
+        if(!empty($argsArray)) {
+             $fields['data'] = $argsArray;
+        }
         $headers = [
             'Authorization: key=' . $this->key,
             'Content-Type: application/json'
