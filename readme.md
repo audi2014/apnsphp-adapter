@@ -1,6 +1,6 @@
 ```php
-use Audi2014\ApnsAdapter\Apns;
-use Audi2014\ApnsAdapter\Fcm;
+use Audi2014\PushAdapter\Apns;
+use Audi2014\PushAdapter\Fcm;
 (new Apns([
     Apns::CONF_APP_CER => 'sandbox.cer',
     Apns::CONF_SANDBOX => true,
